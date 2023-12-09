@@ -68,3 +68,11 @@ a.active {
     font-size: 3.6rem;
     color: var(--text-color);
 }
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content {
+}
