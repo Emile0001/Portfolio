@@ -1,0 +1,31 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "HTML SCSS JAVASCRIPT",
+    "main": "script.js",
+    "scripts": {
+        "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+        "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Emile0001/Portfolio.git"
+    },
+    "keywords": [
+        "CSS",
+        "HTML",
+        "SCSS",
+        "JAVASCRIPT",
+        "RESPONSIVE",
+        "DESIGN"
+    ],
+    "author": "EMILE BOTES",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Emile0001/Portfolio/issues"
+    },
+    "homepage": "https://github.com/Emile0001/Portfolio#readme",
+    "devDependencies": {
+        "sass": "^1.69.5"
+    }
+}
