@@ -1,11 +1,7 @@
 html {
-    /* Set base font size to 62.5% for easier rem calculations.
-   1rem will be 10% of the default browser font size (multiply by 10 for simplicity). */
-    font-size: 62.5%;
+    //accessability
+    font-size: 100%;
 
     /* Hide horizontal overflow to prevent scrolling on the x-axis. */
     overflow-x: hidden;
-
-    //accessability
-    //font-size: 100%
 }
