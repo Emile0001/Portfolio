@@ -5,3 +5,16 @@ html {
     /* Hide horizontal overflow to prevent scrolling on the x-axis. */
     overflow-x: hidden;
 }
+@use "../abstracts" as *;
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
