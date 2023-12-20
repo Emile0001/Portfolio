@@ -1,17 +1,38 @@
 @use "./breakpoints" as *;
 
 // media query
+// $key = argument to pass: sm or md or lg
 @mixin mq($key) {
+    // assign the value received by the get function to $size
+    // $size: map-get($breakpoint,sm/md/lg)
     $size: map-get($breakpoints, $key);
-
+    // check the $size value = true, to make sure its either sm or md or lg
     @if ($size) {
-        @media (width > $size) {
+        // if size is bigger then 30em/50em/75em it will display @content
+        @media (min-width: $size) {
             @content;
         }
     } @else {
         @error '`#{$key}` does not exist in the $breakpoints';
     }
 }
+
+// Example usage of the mixin
+// .myElement {
+//     color: red;
+
+//     @include mq(sm) {
+//         color: blue;
+//     }
+
+//     @include mq(md) {
+//         color: green;
+//     }
+
+//     @include mq(lg) {
+//         color: orange;
+//     }
+// }
 
 // line clamp
 @mixin line-clamp($number) {
@@ -20,3 +41,9 @@
     -webkit-line-clamp: $number;
     overflow: hidden;
 }
+// usage:
+// .container {
+//     // Apply the line clamp mixin to limit text to 3 lines
+//     @include line-clamp(3);
+// }
+// It limits the text content inside the container to a maximum of 3 lines
